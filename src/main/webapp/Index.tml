@@ -18,9 +18,15 @@
         <p>
             [<t:pagelink page="Index">refresh</t:pagelink>]
         </p>
+        <p>url:
+        <a href="http://tapestry.ganshane.com">Tapestry 5 on Google App Engine</a>
+        source:
+        <a href="https://github.com/bitiboy/t5ongae/tree">Github</a>
+        </p>
         <p>
         测试链接
         <a href="http://www.fepss.com">免费OA系统</a>
+        
         </p>
     </p:sidebar>
 
