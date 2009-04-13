@@ -1,6 +1,7 @@
 How to deploy?
  1) modify src/main/webapp/WEB-INF/appengine-web.xml to change app id
- 2)jcai@jcai-notebook:~/workspace/google/t5ongae$ mvn clean package
+ 2) use maven to package application
+   jcai@jcai-notebook:~/workspace/google/t5ongae$ mvn clean package
    [INFO] Scanning for projects...
    [INFO] ------------------------------------------------------------------------
    [INFO] Building web Tapestry 5 Application
@@ -14,7 +15,8 @@ How to deploy?
    [INFO] Finished at: Mon Apr 13 13:47:05 CST 2009
    [INFO] Final Memory: 27M/196M
    [INFO] ------------------------------------------------------------------------
-3)jcai@jcai-notebook:~/workspace/google/t5ongae$ appcfg.sh update target/t5ongae
+3) use google appcfg.sh to deploy your application
+  jcai@jcai-notebook:~/workspace/google/t5ongae$ appcfg.sh update target/t5ongae
   Reading application configuration data...
   2009-04-13 13:48:04.957::INFO:  Logging to STDERR via org.mortbay.log.StdErrLog
   Beginning server interaction for ganshane...
