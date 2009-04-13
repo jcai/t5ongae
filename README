@@ -1,3 +1,5 @@
+The demo URL http://ganshane.appspot.com
+
 How to deploy?
  1) modify src/main/webapp/WEB-INF/appengine-web.xml to change app id
  2) use maven to package application
