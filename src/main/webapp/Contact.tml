@@ -1,0 +1,8 @@
+<html t:type="layout" title="Contact ganshane"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <p>Contact ganshane ...</p>
+    <p>jun.tsai At gmail.com</p>
+
+</html>
