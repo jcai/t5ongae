@@ -1,0 +1,14 @@
+<html t:type="layout" title="web Index"
+      t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    <p>${message:greeting}</p>
+
+    <p:sidebar>
+
+		${employee}
+    </p:sidebar>
+
+</html>
