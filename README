@@ -1,0 +1,40 @@
+How to deploy?
+ 1) modify src/main/webapp/WEB-INF/appengine-web.xml to change app id
+ 2)jcai@jcai-notebook:~/workspace/google/t5ongae$ mvn clean package
+   [INFO] Scanning for projects...
+   [INFO] ------------------------------------------------------------------------
+   [INFO] Building web Tapestry 5 Application
+   [INFO]    task-segment: [clean, package]
+   .........................................
+   [INFO] Building war: /home/jcai/workspace/google/t5ongae/target/t5ongae.war
+   [INFO] ------------------------------------------------------------------------
+   [INFO] BUILD SUCCESSFUL
+   [INFO] ------------------------------------------------------------------------
+   [INFO] Total time: 4 seconds
+   [INFO] Finished at: Mon Apr 13 13:47:05 CST 2009
+   [INFO] Final Memory: 27M/196M
+   [INFO] ------------------------------------------------------------------------
+3)jcai@jcai-notebook:~/workspace/google/t5ongae$ appcfg.sh update target/t5ongae
+  Reading application configuration data...
+  2009-04-13 13:48:04.957::INFO:  Logging to STDERR via org.mortbay.log.StdErrLog
+  Beginning server interaction for ganshane...
+  0% Creating staging directory
+  5% Scanning for jsp files.
+  20% Scanning files on local disk.
+  25% Initiating update.
+  28% Cloning 27 static files.
+  31% Cloning 47 application files.
+  40% Uploading 0 files.
+  90% Deploying new version.
+  95% Will check again in 1 seconds
+  98% Closing update: new version is ready to start serving.
+  99% Uploading index definitions.
+  Update complete.
+  Success.
+  Cleaning up temporary files...
+
+
+
+demo url: http://ganshane.appspot.com
+
+
