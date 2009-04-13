@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ganshane</groupId>
     <artifactId>t5ongae</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>web Tapestry 5 Application</name>
         <dependencies>
