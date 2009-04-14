@@ -18,6 +18,7 @@
         <p>
             [<t:pagelink page="Index">refresh</t:pagelink>]
         </p>
+        <p><t:pagelink page="employeelist">Test Grid and JPA</t:pagelink></p>
         <p>url:
         <a href="http://tapestry.ganshane.com">Tapestry 5 on Google App Engine</a>
         <br/>
