@@ -1,248 +1,253 @@
 <project
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>ganshane</groupId>
-  <artifactId>t5ongae</artifactId>
-  <version>0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>web Tapestry 5 Application</name>
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.tapestry</groupId>
-      <artifactId>tapestry-core</artifactId>
-      <version>${tapestry-release-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jta_1.1_spec</artifactId>
-      <version>1.1.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jpa_3.0_spec</artifactId>
-      <version>1.1.1</version>
-    </dependency>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ganshane</groupId>
+	<artifactId>t5ongae</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>web Tapestry 5 Application</name>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.tapestry</groupId>
+			<artifactId>tapestry-core</artifactId>
+			<version>${tapestry-release-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jta_1.1_spec</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jpa_3.0_spec</artifactId>
+			<version>1.1.1</version>
+		</dependency>
 
-    <dependency>
-      <groupId>org.datanucleus</groupId>
-      <artifactId>datanucleus-jpa</artifactId>
-      <version>1.1.1</version>
-    </dependency>
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-jpa</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring</artifactId>
+			<version>2.5.5</version>
+		</dependency>
 
-    <dependency>
-      <groupId>org.datanucleus</groupId>
-      <artifactId>datanucleus-core</artifactId>
-      <version>1.1.1</version>
-      <exclusions>
-        <exclusion>
-          <groupId>javax.transaction</groupId>
-          <artifactId>transaction-api</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>javax.jdo</groupId>
-      <artifactId>jdo2-api</artifactId>
-      <version>2.3-SNAPSHOT</version>
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-core</artifactId>
+			<version>1.1.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.transaction</groupId>
+					<artifactId>transaction-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>javax.jdo</groupId>
+			<artifactId>jdo2-api</artifactId>
+			<version>2.3-SNAPSHOT</version>
 
-    </dependency> 
-    <dependency>
-      <groupId>com.google</groupId>
-      <artifactId>appengine-sdk-1.2.0-api</artifactId>
-      <version>1.2.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.datanucleus</groupId>
-      <artifactId>datanucleus-appengine</artifactId>
-      <version>1.0.0.final</version>
-    </dependency>
+		</dependency>
+		<dependency>
+			<groupId>com.google</groupId>
+			<artifactId>appengine-sdk-1.2.0-api</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-appengine</artifactId>
+			<version>1.0.0.final</version>
+		</dependency>
 
-    <!--
-    A dependency on either JUnit or TestNG is required, or the surefire
-    plugin (which runs the tests) will fail, preventing Maven from
-    packaging the WAR. Tapestry includes a large number of testing
-    facilities designed for use with TestNG (http://testng.org/), so it's
-    recommended.
-    -->
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <version>5.8</version>
-      <classifier>jdk15</classifier>
-      <scope>test</scope>
-    </dependency>
+		<!--
+			A dependency on either JUnit or TestNG is required, or the surefire
+			plugin (which runs the tests) will fail, preventing Maven from
+			packaging the WAR. Tapestry includes a large number of testing
+			facilities designed for use with TestNG (http://testng.org/), so it's
+			recommended.
+		-->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>5.8</version>
+			<classifier>jdk15</classifier>
+			<scope>test</scope>
+		</dependency>
 
-    <dependency>
-      <groupId>org.easymock</groupId>
-      <artifactId>easymock</artifactId>
-      <version>2.4</version>
-      <scope>test</scope>
-    </dependency>
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>2.4</version>
+			<scope>test</scope>
+		</dependency>
 
-    <!--
-    May conflict with RunJettyRun inside Eclipse. tapestry-test brings in
-    Selenium, which is based on Jetty 5.1; RunJettyRun uses Jetty 6.
-    -->
-    <dependency>
-      <groupId>org.apache.tapestry</groupId>
-      <artifactId>tapestry-test</artifactId>
-      <version>${tapestry-release-version}</version>
-      <scope>test</scope>
-    </dependency>
+		<!--
+			May conflict with RunJettyRun inside Eclipse. tapestry-test brings in
+			Selenium, which is based on Jetty 5.1; RunJettyRun uses Jetty 6.
+		-->
+		<dependency>
+			<groupId>org.apache.tapestry</groupId>
+			<artifactId>tapestry-test</artifactId>
+			<version>${tapestry-release-version}</version>
+			<scope>test</scope>
+		</dependency>
 
-    <!--
-    Provided by the servlet container, but sometimes referenced in the
-    application code.
-    -->
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>2.5</version>
-      <scope>provided</scope>
-    </dependency>
+		<!--
+			Provided by the servlet container, but sometimes referenced in the
+			application code.
+		-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
 
-  </dependencies>
-  <build>
-    <finalName>t5ongae</finalName>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <configuration>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <version>1.2</version>
-        <executions>
-          <execution>
-            <phase>install</phase>
-            <goals>
-              <goal>run</goal>
-            </goals>
-            <configuration>
-              <tasks>
-                <ant target="update"/>
-              </tasks>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.datanucleus</groupId>
-        <artifactId>maven-datanucleus-plugin</artifactId>
-        <version>1.1.2</version>
-        <configuration>
-          <verbose>true</verbose>
-          <mappingIncludes>ganshane/entities/*.class</mappingIncludes>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>compile</phase>
-            <goals>
-              <goal>enhance</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+	</dependencies>
+	<build>
+		<finalName>t5ongae</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<ant target="update" />
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.datanucleus</groupId>
+				<artifactId>maven-datanucleus-plugin</artifactId>
+				<version>1.1.2</version>
+				<configuration>
+					<verbose>true</verbose>
+					<mappingIncludes>ganshane/entities/*.class</mappingIncludes>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>enhance</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.5</source>
-          <target>1.5</target>
-          <optimize>true</optimize>
-        </configuration>
-      </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+					<optimize>true</optimize>
+				</configuration>
+			</plugin>
 
-      <!-- Run the application using "mvn jetty:run" -->
-      <plugin>
-        <groupId>org.mortbay.jetty</groupId>
-        <artifactId>maven-jetty-plugin</artifactId>
-        <version>6.1.9</version>
-        <configuration>
-          <!-- Log to the console. -->
-          <requestLog implementation="org.mortbay.jetty.NCSARequestLog">
-            <!--
-            This doesn't do anything for Jetty, but is a workaround for a
-            Maven bug that prevents the requestLog from being set.
-            -->
-            <append>true</append>
-          </requestLog>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+			<!-- Run the application using "mvn jetty:run" -->
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.9</version>
+				<configuration>
+					<!-- Log to the console. -->
+					<requestLog implementation="org.mortbay.jetty.NCSARequestLog">
+						<!--
+							This doesn't do anything for Jetty, but is a workaround for a
+							Maven bug that prevents the requestLog from being set.
+						-->
+						<append>true</append>
+					</requestLog>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
-  <reporting>
+	<reporting>
 
-    <!--
-    Adds a report detailing the components, mixins and base classes
-    defined by this module.
-    -->
-    <plugins>
-      <plugin>
-        <groupId>org.apache.tapestry</groupId>
-        <artifactId>tapestry-component-report</artifactId>
-        <version>${tapestry-release-version}</version>
-        <configuration>
-          <rootPackage>ganshane</rootPackage>
-        </configuration>
-      </plugin>
-    </plugins>
-  </reporting>
+		<!--
+			Adds a report detailing the components, mixins and base classes
+			defined by this module.
+		-->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tapestry</groupId>
+				<artifactId>tapestry-component-report</artifactId>
+				<version>${tapestry-release-version}</version>
+				<configuration>
+					<rootPackage>ganshane</rootPackage>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
 
-  <repositories>
+	<repositories>
 
-    <!--
-    This repository is only needed if the Tapestry released artifacts
-    haven't made it to the central Maven repository yet.
-    -->
-    <repository>
-      <id>tapestry</id>
-      <url>http://tapestry.formos.com/maven-repository/</url>
-    </repository>
+		<!--
+			This repository is only needed if the Tapestry released artifacts
+			haven't made it to the central Maven repository yet.
+		-->
+		<repository>
+			<id>tapestry</id>
+			<url>http://tapestry.formos.com/maven-repository/</url>
+		</repository>
 
-    <!--
-    This repository is only needed when the tapestry-release-version is a
-    snapshot release.
-    -->
-    <repository>
-      <id>tapestry-snapshots</id>
-      <url>http://tapestry.formos.com/maven-snapshot-repository/</url>
-    </repository>
+		<!--
+			This repository is only needed when the tapestry-release-version is a
+			snapshot release.
+		-->
+		<repository>
+			<id>tapestry-snapshots</id>
+			<url>http://tapestry.formos.com/maven-snapshot-repository/</url>
+		</repository>
 
-    <repository>
-      <id>codehaus.snapshots</id>
-      <url>http://snapshots.repository.codehaus.org</url>
-    </repository>
-    <repository>
-      <id>OpenQA_Release</id>
-      <name>OpenQA Release Repository</name>
-      <url>http://archiva.openqa.org/repository/releases/</url>
-    </repository>
-  </repositories>
+		<repository>
+			<id>codehaus.snapshots</id>
+			<url>http://snapshots.repository.codehaus.org</url>
+		</repository>
+		<repository>
+			<id>OpenQA_Release</id>
+			<name>OpenQA Release Repository</name>
+			<url>http://archiva.openqa.org/repository/releases/</url>
+		</repository>
+	</repositories>
 
-  <pluginRepositories>
+	<pluginRepositories>
 
-    <!--
-    As above, this can be commented out when access to the snapshot
-    version of a Tapestry Maven plugin is not required.
-    -->
-    <pluginRepository>
-      <id>tapestry-snapshots</id>
-      <url>http://tapestry.formos.com/maven-snapshot-repository/</url>
-    </pluginRepository>
-    <pluginRepository>
-      <id>datanucleus-snapshots</id>
-      <url>http://www.datanucleus.org/downloads/maven2</url>
-    </pluginRepository>
+		<!--
+			As above, this can be commented out when access to the snapshot
+			version of a Tapestry Maven plugin is not required.
+		-->
+		<pluginRepository>
+			<id>tapestry-snapshots</id>
+			<url>http://tapestry.formos.com/maven-snapshot-repository/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>datanucleus-snapshots</id>
+			<url>http://www.datanucleus.org/downloads/maven2</url>
+		</pluginRepository>
 
-  </pluginRepositories>
+	</pluginRepositories>
 
-  <properties>
-    <tapestry-release-version>5.0.18</tapestry-release-version>
-  </properties>
+	<properties>
+		<tapestry-release-version>5.0.18</tapestry-release-version>
+	</properties>
 </project>

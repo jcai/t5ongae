@@ -6,10 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.apache.tapestry5.beaneditor.NonVisual;
+
 @Entity
 public class Employee {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private Long id;
 
     private String firstName;
@@ -19,11 +20,13 @@ public class Employee {
     private Date hireDate;
 
     // Accessors for the fields.  JPA doesn't use these, but your application does.
-
-    public long getId() {
+    @NonVisual
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -1,0 +1,19 @@
+<html t:type="layout" title="web Index"
+      t:sidebarTitle="Current Time"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+    <p>${message:greeting}</p>
+
+    <p:sidebar>
+		<t:pagelink page="EmployeeForm"> create employee</t:pagelink>
+		<t:grid source="employees" row="employee">
+            <p:empty>
+              <p>There are no users to display; you can <t:pagelink page="EmployeeForm"> create employee</t:pagelink>.</p>
+            </p:empty>
+        </t:grid>
+
+    </p:sidebar>
+
+</html>
