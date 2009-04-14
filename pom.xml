@@ -168,6 +168,7 @@
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.9</version>
 				<configuration>
+					<contextPath>/</contextPath>
 					<!-- Log to the console. -->
 					<requestLog implementation="org.mortbay.jetty.NCSARequestLog">
 						<!--

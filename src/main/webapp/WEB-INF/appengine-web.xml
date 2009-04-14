@@ -2,7 +2,7 @@
   <!-- Replace this with your application id from http://appengine.google.com -->
   <application>ganshane</application>
 
-   <version>1</version>
+   <version>2</version>
    <sessions-enabled>true</sessions-enabled>
 
 </appengine-web-app>
