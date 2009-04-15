@@ -6,7 +6,8 @@
 	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
 	<classpathentry kind="con" path="org.maven.ide.eclipse.MAVEN2_CLASSPATH_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/jcai/dev-libs/appengine-java-sdk-1.2.0/lib/tools/orm/geronimo-jpa_3.0_spec-1.1.1.jar"/>
-	<classpathentry kind="lib" path="/home/jcai/dev-libs/appengine-java-sdk-1.2.0/lib/tools/orm/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/jcai/dev-libs/appengine-java-sdk-1.2.0/lib/impl/appengine-api-stubs.jar"/>
+	<classpathentry kind="lib" path="/home/jcai/dev-libs/appengine-java-sdk-1.2.0/lib/impl/appengine-local-runtime.jar"/>
+	<classpathentry kind="lib" path="/home/jcai/dev-libs/appengine-java-sdk-1.2.0/lib/impl/appengine-api.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
