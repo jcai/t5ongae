@@ -13,6 +13,7 @@ public class LocalDatastoreTestCase extends LocalServiceTestCase {
         super.setUp();
         ApiProxyLocalImpl proxy = (ApiProxyLocalImpl) ApiProxy.getDelegate();
         proxy.setProperty(LocalDatastoreService.NO_STORAGE_PROPERTY, Boolean.TRUE.toString());
+        System.out.println("start up ...........");
     }
 
     @Override

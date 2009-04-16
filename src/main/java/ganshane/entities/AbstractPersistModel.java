@@ -32,21 +32,21 @@ import javax.persistence.MappedSuperclass;
 public class AbstractPersistModel implements Serializable, PersistModel {
 	private static final long serialVersionUID = -3238804638512905059L;
 
-	private String id;
+	private Long id;
 
 	/**
 	 * @see ganshane.entities.PersistModel#getId()
 	 */
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
 	/**
 	 * @see ganshane.entities.PersistModel#setId(java.lang.String)
 	 */
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
     /* bean properties begin */

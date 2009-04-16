@@ -137,7 +137,7 @@ public class User extends AbstractPersistModel implements Principal{
 	 * @return new instance of User
 	 */
 	@Transient
-	public static User newInstance(String userId) {
+	public static User newInstance(Long userId) {
 		User user =new User();
 		user.setId(userId);
 		return user;

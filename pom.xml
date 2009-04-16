@@ -50,7 +50,6 @@
 			<groupId>javax.jdo</groupId>
 			<artifactId>jdo2-api</artifactId>
 			<version>2.3-SNAPSHOT</version>
-
 		</dependency>
 		<dependency>
 			<groupId>com.google</groupId>
@@ -62,7 +61,11 @@
 			<artifactId>datanucleus-appengine</artifactId>
 			<version>1.0.0.final</version>
 		</dependency>
-
+        <dependency>
+            <groupId>jcache</groupId>
+            <artifactId>jcache</artifactId>
+            <version>1.0-dev-2</version>
+        </dependency>
 		<!--
 			A dependency on either JUnit or TestNG is required, or the surefire
 			plugin (which runs the tests) will fail, preventing Maven from
@@ -71,12 +74,23 @@
 			recommended.
 		-->
 		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>5.8</version>
-			<classifier>jdk15</classifier>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+        <dependency>
+            <groupId>com.google</groupId>
+            <artifactId>appengine-api-stubs</artifactId>
+            <version>1.2.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google</groupId>
+            <artifactId>appengine-local-runtime</artifactId>
+            <version>1.2.0</version>
+            <scope>test</scope>
+        </dependency>
 
 		<dependency>
 			<groupId>org.easymock</groupId>
@@ -89,12 +103,6 @@
 			May conflict with RunJettyRun inside Eclipse. tapestry-test brings in
 			Selenium, which is based on Jetty 5.1; RunJettyRun uses Jetty 6.
 		-->
-		<dependency>
-			<groupId>org.apache.tapestry</groupId>
-			<artifactId>tapestry-test</artifactId>
-			<version>${tapestry-release-version}</version>
-			<scope>test</scope>
-		</dependency>
 
 		<!--
 			Provided by the servlet container, but sometimes referenced in the
@@ -138,10 +146,12 @@
 				<groupId>org.datanucleus</groupId>
 				<artifactId>maven-datanucleus-plugin</artifactId>
 				<version>1.1.2</version>
-				<configuration>
-					<verbose>true</verbose>
-                                        <mappingIncludes>ganshane/entities/**/*.class</mappingIncludes>
-				</configuration>
+                <configuration>
+                    <verbose>true</verbose>
+                    <mappingIncludes>ganshane/entities/**/*.class</mappingIncludes>
+                    <enhancerName>ASM</enhancerName>
+                    <api>JPA</api>
+                </configuration>
 				<executions>
 					<execution>
 						<phase>compile</phase>

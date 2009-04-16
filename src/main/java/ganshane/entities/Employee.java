@@ -1,5 +1,6 @@
 package ganshane.entities;
 import java.util.Date;
+import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +10,7 @@ import javax.persistence.Id;
 import org.apache.tapestry5.beaneditor.NonVisual;
 
 @Entity
-public class Employee {
+public class Employee implements Serializable{
     
     private Long id;
 

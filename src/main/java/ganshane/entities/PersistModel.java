@@ -23,12 +23,12 @@ package ganshane.entities;
  */
 public interface PersistModel {
 
-	public abstract String getId();
+	public abstract Long getId();
 
 	/**
 	 * @param id
 	 *            The id to set.
 	 */
-	public abstract void setId(String id);
+	public abstract void setId(Long id);
 
 }

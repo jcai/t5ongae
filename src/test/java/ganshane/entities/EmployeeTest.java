@@ -14,12 +14,15 @@ public class EmployeeTest extends LocalDatastoreTestCase {
 	public void testSaveEmployee(){
 		EntityManagerFactory factory = new EntityManagerFactoryImpl();
 		EntityManager entityManager = factory.createEntityManager();
+        
+        entityManager.getTransaction().begin();
 		EntityService entityService = new EntityServiceImpl(entityManager);
 		Employee employee = new Employee();
 		entityService.persist(employee);
+        entityManager.getTransaction().commit();
+        
 		Query query = new Query(Employee.class.getSimpleName());
-      assertEquals(2, DatastoreServiceFactory.getDatastoreService().prepare(query).countEntities());
-
+        assertEquals(1, DatastoreServiceFactory.getDatastoreService().prepare(query).countEntities());
 	}
 
 }

@@ -29,7 +29,6 @@ import javax.persistence.Transient;
  * @since 0.0.3
  */
 @Entity
-@javax.persistence.Table(name="friend_List")
 public class FriendList extends AbstractPersistModel{
 	/**
 	 * 
@@ -60,7 +59,7 @@ public class FriendList extends AbstractPersistModel{
 	 * @return new instance of User
 	 */
 	@Transient
-	public static FriendList newInstance(String id) {
+	public static FriendList newInstance(Long id) {
 		FriendList friendList =new FriendList();
 		friendList.setId(id);
 		return friendList;

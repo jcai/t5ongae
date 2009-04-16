@@ -34,7 +34,6 @@ import javax.persistence.Transient;
  * @since 0.0.1
  */
 @Entity
-@Table(name="forums")
 public class ForumImpl extends AbstractPersistModel implements Forum {
 
 	/**
@@ -191,7 +190,7 @@ public class ForumImpl extends AbstractPersistModel implements Forum {
 		this.topics = topics;
 	}
 
-	public static Forum newInstance(String forumId) {
+	public static Forum newInstance(Long forumId) {
 		Forum forumImpl = new ForumImpl();
 		forumImpl.setId(forumId);
 		return forumImpl;
