@@ -44,7 +44,7 @@ public class AbstractPersistModel implements Serializable, PersistModel {
 	}
 
 	/**
-	 * @see ganshane.entities.PersistModel#setId(java.lang.String)
+	 * @see ganshane.entities.PersistModel#setId(java.lang.Long)
 	 */
 	public void setId(Long id) {
 		this.id = id;
