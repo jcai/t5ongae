@@ -20,7 +20,6 @@ import javax.persistence.Table;
  * @since 0.0.1
  */
 @Entity
-@Table(name="classifies")
 public class Classify extends AbstractPersistModel implements Treeable  {
     private String name;
     // ---  以下用来显示树形结构的

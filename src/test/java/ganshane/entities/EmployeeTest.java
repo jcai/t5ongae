@@ -12,7 +12,7 @@ import com.google.appengine.api.datastore.Query;
 
 public class EmployeeTest extends LocalDatastoreTestCase {
 	public void testSaveEmployee(){
-		EntityManagerFactory factory = new EntityManagerFactoryImpl();
+        EntityManagerFactory factory = this.getFactory();
 		EntityManager entityManager = factory.createEntityManager();
         
         entityManager.getTransaction().begin();

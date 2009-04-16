@@ -1,12 +1,16 @@
 package ganshane.entities;
 
 import ganshane.LocalServiceTestCase;
+import ganshane.services.entity.impl.EntityManagerFactoryImpl;
 
 import com.google.appengine.api.datastore.dev.LocalDatastoreService;
 import com.google.appengine.tools.development.ApiProxyLocalImpl;
 import com.google.apphosting.api.ApiProxy;
 
+import javax.persistence.EntityManagerFactory;
+
 public class LocalDatastoreTestCase extends LocalServiceTestCase {
+    private static EntityManagerFactory entityManagerFactory;
 
     @Override
     public void setUp() throws Exception {
@@ -22,6 +26,12 @@ public class LocalDatastoreTestCase extends LocalServiceTestCase {
         LocalDatastoreService datastoreService = (LocalDatastoreService) proxy.getService("datastore_v3");
         datastoreService.clearProfiles();
         super.tearDown();
+    }
+    protected EntityManagerFactory getFactory(){
+        if (entityManagerFactory == null) {
+            entityManagerFactory = new EntityManagerFactoryImpl();
+        }
+        return entityManagerFactory;
     }
 
 }

@@ -27,7 +27,7 @@ import com.google.appengine.api.datastore.Query;
 public class NodeTest extends LocalDatastoreTestCase {
 
     public void testSaveNode(){
-		EntityManagerFactory factory = new EntityManagerFactoryImpl();
+        EntityManagerFactory factory = this.getFactory();
 		EntityManager entityManager = factory.createEntityManager();
 
         entityManager.getTransaction().begin();

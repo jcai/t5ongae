@@ -4,7 +4,7 @@
  * file: $Id$
  * created at:2009-4-16
  */
-package ganshane.entities;
+package ganshane.entities.impl;
 
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Query;
@@ -12,6 +12,7 @@ import ganshane.services.entity.EntityService;
 import ganshane.services.entity.impl.EntityManagerFactoryImpl;
 import ganshane.services.entity.impl.EntityServiceImpl;
 import ganshane.entities.impl.Classify;
+import ganshane.entities.LocalDatastoreTestCase;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -23,7 +24,7 @@ import javax.persistence.EntityManagerFactory;
  */
 public class ClassifyTest extends LocalDatastoreTestCase {
     public void testSaveClassify(){
-		EntityManagerFactory factory = new EntityManagerFactoryImpl();
+        EntityManagerFactory factory = this.getFactory();
 		EntityManager entityManager = factory.createEntityManager();
 
         entityManager.getTransaction().begin();
