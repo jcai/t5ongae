@@ -4,35 +4,40 @@
  * file: $Id$
  * created at:2009-4-16
  */
-package ganshane.entities;
+package ganshane.entities.impl;
 
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.Query;
-import ganshane.services.entity.EntityService;
+import ganshane.entities.LocalDatastoreTestCase;
+import ganshane.entities.Employee;
 import ganshane.services.entity.impl.EntityManagerFactoryImpl;
 import ganshane.services.entity.impl.EntityServiceImpl;
-import ganshane.entities.impl.Classify;
+import ganshane.services.entity.EntityService;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Query;
+
 /**
+ * 针对节点的测试
  * @author <a href="jun.tsai@fepss.com">Jun Tsai</a>
  * @version $Revision$
  * @since 0.0.1
  */
-public class ClassifyTest extends LocalDatastoreTestCase {
-    public void testSaveClassify(){
+public class NodeTest extends LocalDatastoreTestCase {
+
+    public void testSaveNode(){
 		EntityManagerFactory factory = new EntityManagerFactoryImpl();
 		EntityManager entityManager = factory.createEntityManager();
 
         entityManager.getTransaction().begin();
 		EntityService entityService = new EntityServiceImpl(entityManager);
-		Classify classify= new Classify();
-		entityService.persist(classify);
+		Node node= new Node();
+		entityService.persist(node);
         entityManager.getTransaction().commit();
 
-		Query query = new Query(Classify.class.getSimpleName());
+		Query query = new Query(Node.class.getSimpleName());
         assertEquals(1, DatastoreServiceFactory.getDatastoreService().prepare(query).countEntities());
 	}
+
 }

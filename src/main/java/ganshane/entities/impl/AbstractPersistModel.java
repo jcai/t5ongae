@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package ganshane.entities;
+package ganshane.entities.impl;
+
+import ganshane.entities.PersistModel;
 
 import java.io.Serializable;
 

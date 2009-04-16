@@ -4,7 +4,9 @@
  * file: $Id$
  * created at:2009-4-16
  */
-package ganshane.entities;
+package ganshane.entities.impl;
+
+import ganshane.entities.TimestampedModel;
 
 import javax.persistence.MappedSuperclass;
 import java.util.Date;

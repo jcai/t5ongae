@@ -4,11 +4,15 @@
  * file: $Id$
  * created at:2009-4-16
  */
-package ganshane.entities;
+package ganshane.entities.impl;
+
+import ganshane.entities.impl.AbstractPersistModel;
+import ganshane.entities.Treeable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Basic;
+import javax.persistence.Table;
 
 /**
  * @author <a href="jun.tsai@fepss.com">Jun Tsai</a>
@@ -16,7 +20,8 @@ import javax.persistence.Basic;
  * @since 0.0.1
  */
 @Entity
-public class ClassifyImpl extends AbstractPersistModel implements Classify{
+@Table(name="classifies")
+public class Classify extends AbstractPersistModel implements Treeable  {
     private String name;
     // ---  以下用来显示树形结构的
 
@@ -56,8 +61,6 @@ public class ClassifyImpl extends AbstractPersistModel implements Classify{
 
 	/**
 	 */
-    @Column(name="DEPTH_")
-    @Basic
 	public int getDepth() {
 		return depth;
 	}

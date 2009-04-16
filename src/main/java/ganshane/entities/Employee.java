@@ -3,11 +3,8 @@ import java.util.Date;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-import org.apache.tapestry5.beaneditor.NonVisual;
+import ganshane.entities.impl.AbstractPersistModel;
 
 @Entity
 public class Employee extends AbstractPersistModel implements Serializable{
