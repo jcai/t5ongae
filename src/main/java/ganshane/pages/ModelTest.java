@@ -15,18 +15,15 @@
  */
 package ganshane.pages;
 
-import ganshane.services.entity.EntityService;
 import ganshane.entities.Employee;
-import ganshane.entities.forum.ForumImpl;
-import ganshane.entities.forum.Forum;
-
+import ganshane.services.entity.EntityService;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.slf4j.Logger;
 
-import javax.cache.CacheManager;
-import javax.cache.CacheFactory;
-import javax.cache.CacheException;
 import javax.cache.Cache;
+import javax.cache.CacheException;
+import javax.cache.CacheFactory;
+import javax.cache.CacheManager;
 import java.util.Collections;
 
 /**
@@ -50,10 +47,5 @@ public class ModelTest {
         cache.put(employee.getId(),employee);
 	}
 
-	public void onActionFromForum(){
-        Forum forum = new ForumImpl();
-        entityService.persist(forum);
-        logger.debug("forum id:"+forum.getId());
-        
-	}
+	
 }

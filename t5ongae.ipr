@@ -367,17 +367,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-jpa_3.0_spec/1.1.1/geronimo-jpa_3.0_spec-1.1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.datanucleus:datanucleus-jpa:1.1.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-jpa/1.1.1/datanucleus-jpa-1.1.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-jpa/1.1.1/datanucleus-jpa-1.1.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-jpa/1.1.1/datanucleus-jpa-1.1.1-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: javax.persistence:persistence-api:1.0">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/persistence/persistence-api/1.0/persistence-api-1.0.jar!/" />
@@ -411,17 +400,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.datanucleus:datanucleus-core:1.1.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-core/1.1.1/datanucleus-core-1.1.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-core/1.1.1/datanucleus-core-1.1.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-core/1.1.1/datanucleus-core-1.1.1-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: javax.jdo:jdo2-api:2.3-SNAPSHOT">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/jdo/jdo2-api/2.3-SNAPSHOT/jdo2-api-2.3-SNAPSHOT.jar!/" />
@@ -442,17 +420,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/com/google/appengine-sdk-1.2.0-api/1.2.0/appengine-sdk-1.2.0-api-1.2.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.datanucleus:datanucleus-appengine:1.0.0.final">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-appengine/1.0.0.final/datanucleus-appengine-1.0.0.final.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-appengine/1.0.0.final/datanucleus-appengine-1.0.0.final-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-appengine/1.0.0.final/datanucleus-appengine-1.0.0.final-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: junit:junit:3.8.1">
@@ -519,6 +486,39 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/com/google/appengine-local-runtime/1.2.0/appengine-local-runtime-1.2.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.datanucleus:datanucleus-jpa:1.1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-jpa/1.1.0/datanucleus-jpa-1.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-jpa/1.1.0/datanucleus-jpa-1.1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-jpa/1.1.0/datanucleus-jpa-1.1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.datanucleus:datanucleus-core:1.1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-core/1.1.0/datanucleus-core-1.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-core/1.1.0/datanucleus-core-1.1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-core/1.1.0/datanucleus-core-1.1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.datanucleus:datanucleus-appengine:1.0.1.m1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-appengine/1.0.1.m1/datanucleus-appengine-1.0.1.m1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-appengine/1.0.1.m1/datanucleus-appengine-1.0.1.m1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-appengine/1.0.1.m1/datanucleus-appengine-1.0.1.m1-sources.jar!/" />
       </SOURCES>
     </library>
   </component>
