@@ -1,0 +1,13 @@
+<html t:type="layout" title="Contact ganshane"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+<form t:type="form" t:id="mailForm">
+    <p>from:<t:textfield value="from"/></p>
+    <p>to:<t:textfield value="to"/></p>
+    <p>subject:<t:textfield value="subject"/></p>
+    <p>body:<t:textfield value="body"/></p>
+    <p><input type="submit"/></p>
+</form>
+
+</html>

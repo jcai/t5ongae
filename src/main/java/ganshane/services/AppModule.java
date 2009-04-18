@@ -5,6 +5,8 @@ import ganshane.services.entity.EntityService;
 import ganshane.services.entity.impl.EntityManagerFactoryImpl;
 import ganshane.services.entity.impl.EntityManagerManagerImpl;
 import ganshane.services.entity.impl.EntityServiceImpl;
+import ganshane.services.google.impl.EmailSenderImpl;
+import ganshane.services.google.EmailSender;
 
 import java.io.IOException;
 
@@ -35,6 +37,7 @@ public class AppModule {
 	public static void bind(ServiceBinder binder) {
 		binder.bind(EntityManagerFactory.class, EntityManagerFactoryImpl.class);
 		binder.bind(EntityService.class, EntityServiceImpl.class);
+        binder.bind(EmailSender.class, EmailSenderImpl.class);
 	}
 
 	public static void contributeApplicationDefaults(
