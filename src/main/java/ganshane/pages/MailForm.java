@@ -9,6 +9,7 @@ package ganshane.pages;
 import ganshane.services.google.EmailSender;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.annotations.Property;
+import org.slf4j.Logger;
 
 /**
  * 发送Email的页面
@@ -19,6 +20,8 @@ import org.apache.tapestry5.annotations.Property;
 public class MailForm {
     @Inject
     private EmailSender sender;
+    @Inject
+    private Logger logger;
     @Property
     private String from;
     @Property
@@ -29,6 +32,7 @@ public class MailForm {
     private String body;
 
     void onActionFromMailForm(){
+        logger.debug("from :"+from);
         sender.sendMail(from,to,subject,body);
         
     }
