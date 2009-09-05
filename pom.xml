@@ -12,6 +12,7 @@
       <groupId>org.apache.tapestry</groupId>
       <artifactId>tapestry-core</artifactId>
       <version>${tapestry-release-version}</version>
+      <classifier>gae</classifier>
     </dependency>
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
@@ -275,6 +276,6 @@
   </pluginRepositories>
 
   <properties>
-    <tapestry-release-version>5.0.18</tapestry-release-version>
+    <tapestry-release-version>5.1.0.5</tapestry-release-version>
   </properties>
 </project>

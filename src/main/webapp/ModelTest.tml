@@ -1,5 +1,5 @@
 <html t:type="layout" title="Contact ganshane"
-      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
       xmlns:p="tapestry:parameter">
 
 <t:actionlink  t:id="employee">Employee Test</t:actionlink><br/>
